@@ -10,4 +10,4 @@
 - Final compiled app: approximately 94 KB JavaScript + 16 KB CSS gzipped. Complete static output, including self-hosted fonts and social artwork: under 800 KB uncompressed.
 - `git diff --check`: passed.
 
-Publishing is **blocked**, not verified live. GitHub repository creation and Vercel project creation both returned permission errors. The requested production domain returned HTTP 404 when checked. See `DEPLOYMENT.md` for the exact target configuration, observed permissions, and DNS recommendation.
+The finished game has subsequently been **pushed to GitHub main**, with the remote commit verified. **Vercel publishing remains blocked**: the connected account still receives a project-creation permission error. The requested production domain returned HTTP 404 when checked; no live deployment is claimed. See `DEPLOYMENT.md` for the exact target configuration, observed permissions, and DNS recommendation.
