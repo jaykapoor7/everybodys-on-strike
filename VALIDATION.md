@@ -10,4 +10,4 @@
 - Final compiled app: approximately 94 KB JavaScript + 16 KB CSS gzipped. Complete static output, including self-hosted fonts and social artwork: under 800 KB uncompressed.
 - `git diff --check`: passed.
 
-The finished game has subsequently been **pushed to GitHub main**, with the remote commit verified. **Vercel publishing remains blocked**: the connected account still receives a project-creation permission error. The requested production domain returned HTTP 404 when checked; no live deployment is claimed. See `DEPLOYMENT.md` for the exact target configuration, observed permissions, and DNS recommendation.
+Production is now **live at https://strike.kapoorjay.com**. GitHub `main` is pushed and verified. Vercel reports the production deployment READY and the custom domain verified. The public HTTPS document returns 200; served JavaScript/CSS hashes exactly match the tested local production build; the favicon, social artwork, robots file, and six font files also return 200. No manual DNS changes were required. The complete browser suite was not rerun against the public deployment. See `DEPLOYMENT.md` for the production configuration.

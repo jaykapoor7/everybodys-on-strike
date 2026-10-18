@@ -1,36 +1,41 @@
 # Release and hosting
 
-## Intended targets
+## Production
 
-- Repository: `jaykapoor7/everybodys-on-strike`, branch `main`.
-- Vercel team: `jaykapoor700-1687s-projects` (`team_qRMlvTFfcxrezBvNVj8C02iF`).
-- New, independent Vercel project: `everybodys-on-strike`.
-- Production URL: `https://strike.kapoorjay.com`.
-- Framework: Vite. Build: `npm run build`. Output: `dist`. Install: `npm ci`.
-- No environment variables, external APIs, storage services, or secrets.
+- Live game: https://strike.kapoorjay.com
+- Vercel address: https://everybodys-on-strike-mb6b.vercel.app
+- Repository: https://github.com/jaykapoor7/everybodys-on-strike, branch `main`.
+- Independent Vercel project: `everybodys-on-strike-mb6b`.
+- Project ID: `prj_k71YAakMNOT4jF9399CarsN0Ch4T`.
+- Team: `jaykapoor700-1687s-projects` (`team_qRMlvTFfcxrezBvNVj8C02iF`).
+- Framework: Vite, Node.js 24. Build: `npm run build`. Output: `dist`. Install: `npm ci`.
+- No environment variables, external APIs, backend services, or secrets.
 
-## Current release status — October 17, 2026 (America/New_York)
+## Verified release — October 17, 2026 (America/New_York)
 
-The user created [jaykapoor7/everybodys-on-strike](https://github.com/jaykapoor7/everybodys-on-strike). The finished game is now pushed to `main`, and the remote commit was verified. The repository's initial README commit was preserved by merging its history with the game release. No other repository was modified.
+The game is pushed to GitHub `main`. The repository's initial README commit was preserved by merging its history with the game release.
 
-The connected Vercel account can read the intended team. The requested Vercel project was not found, including a search for projects named `strike`. Importing the now-populated GitHub repository with `POST /v11/projects` still returned **403: You don’t have permission to create the project**. The documented CLI fallback has no existing CLI credentials. No Vercel project or deployment was created. No deployment success is claimed.
+The user imported the repository into Vercel and supplied its production URL. Vercel confirmed the production deployment was **READY**, with GitHub commit `1ad7423f752b779d38123fbaa87a0b33a8ccf492`.
 
-## Complete publishing once access is available
+The custom domain `strike.kapoorjay.com` was then attached to project `prj_k71YAakMNOT4jF9399CarsN0Ch4T`. Vercel reports the domain as verified and its alias points to this game's production deployment.
 
-1. Open [Vercel New Project](https://vercel.com/new), select team `jaykapoor700-1687s-projects`, and import `jaykapoor7/everybodys-on-strike`.
-2. Name the independent project `everybodys-on-strike`. Vite, the build command, and `dist` output are configured by `vercel.json`. Use Node.js 24. No environment variables are needed.
-3. Deploy `main` to production. Wait for READY, visit the deployment URL, and check the opening button and at least one full run before declaring it live.
-4. Add `strike.kapoorjay.com` to this project’s production domains. Verify the domain and the actual page response.
+Public HTTPS verification succeeded at the custom domain: the opening document returns HTTP 200, the JavaScript and CSS SHA-256 hashes exactly match the locally tested production build, and the favicon, social artwork, robots file, and all six font files return HTTP 200. The game was previously played through all three endings on desktop and mobile in the automated local production-build suite. The complete browser suite was not rerun against the public deployment.
+
+## DNS
+
+The domain already uses Vercel DNS and resolves to Vercel infrastructure. Attaching the subdomain was sufficient: HTTPS and application asset delivery work. **No manual DNS action is required.** No apex-domain, nameserver, portfolio, or other-game settings were changed.
+
+For future diagnosis, inspect this exact project's domain record and use Vercel's current domain/project-specific DNS recommendation. Do not replace working records with generic values.
+
+## Future releases
+
+Push the tested game to GitHub `main`; this repository is connected to the independent Vercel project. Confirm the resulting deployment is READY and verify https://strike.kapoorjay.com before reporting a release as live.
 
 An already authenticated Vercel CLI can also deploy from this directory:
 
 ```sh
-vercel link --scope jaykapoor700-1687s-projects --project everybodys-on-strike
+vercel link --scope jaykapoor700-1687s-projects --project everybodys-on-strike-mb6b
 vercel deploy --prod --scope jaykapoor700-1687s-projects
 ```
 
-## DNS
-
-Vercel’s domain configuration read during this release reports the parent zone using `ns1.vercel-dns.com` and `ns2.vercel-dns.com`, with `strike.kapoorjay.com` already resolving to Vercel infrastructure. Adding the domain to the new project may therefore handle DNS automatically.
-
-If the new project still requests a DNS change, follow its displayed recommendation. The current API recommendation is a **CNAME named `strike` pointing to `cname.vercel-dns.com`**. Replace conflicting records for that subdomain only if needed. Do not change the apex domain, nameservers, portfolio, or any other game’s records. No DNS records were changed during this build.
+Use the immutable project ID for connector lookups when needed. It resolves to the verified intended team and project.

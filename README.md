@@ -55,9 +55,9 @@ The browser suite plays the complete story through all three endings on desktop 
 
 Independent GitHub repository: [jaykapoor7/everybodys-on-strike](https://github.com/jaykapoor7/everybodys-on-strike). The finished game is pushed to `main`.
 
-Intended Vercel project: `everybodys-on-strike`. Intended production domain: `strike.kapoorjay.com`.
+Live game: **https://strike.kapoorjay.com**. Independent Vercel project: `everybodys-on-strike-mb6b`.
 
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for deployment instructions and the account-access status observed during this build. No other project is required or modified.
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for the verified production configuration and future release instructions. No other project is required or modified.
 
 ## Credits
 
